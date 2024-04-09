@@ -2,18 +2,16 @@ import { Link, Route, Routes } from "react-router-dom";
 import { Suspense } from "react";
 import MainPageAsync from "@/pages/MainPage/MainPage.async";
 import AboutPageAsync from "@/pages/AboutPage/AboutPage.async";
-import { Button } from "@/components/ui/button";
 import Header from "@/pages/Header/Header";
-import useTheme from "@/hooks/useTheme";
 
 const App = () => {
-    const { mode, setMode } = useTheme();
+
 
     return (
         <div>
             <Header />
             <div className="flex flex-col h-screen">
-                <nav className="bg-slate-200">
+                <nav>
                     <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
                         <div className="flex text-sm py-4 ">
                             <Link
@@ -29,14 +27,6 @@ const App = () => {
                                 About
                             </Link>
                         </div>
-                        <Button
-                            onClick={() =>
-                                setMode(mode === "dark" ? "light" : "dark")
-                            }
-                        >
-                            {" "}
-                            Change Theme Mode ({mode.toUpperCase()})
-                        </Button>
                     </div>
                 </nav>
 
