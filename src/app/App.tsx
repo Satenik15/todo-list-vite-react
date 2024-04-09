@@ -3,8 +3,11 @@ import { Suspense } from "react";
 import MainPageAsync from "@/pages/MainPage/MainPage.async";
 import AboutPageAsync from "@/pages/AboutPage/AboutPage.async";
 import { Button } from "@/components/ui/button";
+import useTheme from "@/hooks/useTheme";
 
 const App = () => {
+    const { mode, setMode } = useTheme();
+
     return (
         <div className="flex flex-col h-screen">
               
@@ -19,7 +22,7 @@ const App = () => {
                         </Link>
                         
                     </div>
-                    <Button>Dark mode</Button>
+                    <Button  onClick={() => setMode(mode === "dark" ? "light" : "dark")}> Change Theme Mode ({mode.toUpperCase()})</Button>
                 </div>
            </nav>
 
