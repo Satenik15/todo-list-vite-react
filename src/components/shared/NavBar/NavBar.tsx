@@ -1,20 +1,32 @@
 import useTheme from "@/hooks/useTheme";
-import { User, SquarePlus, Moon, Search, Sun, Cpu, Newspaper, ShieldQuestion, LogIn, UserRoundPlus } from "lucide-react";
+import {
+    User,
+    SquarePlus,
+    Moon,
+    Search,
+    Sun,
+    Cpu,
+    Newspaper,
+    ShieldQuestion,
+    LogIn,
+    UserRoundPlus,
+} from "lucide-react";
+import logo from "@/assets/logo.webp";
 
 import {
     DropdownMenu,
     DropdownMenuContent,
     DropdownMenuItem,
     DropdownMenuTrigger,
-  } from "@/components/ui/dropdown-menu"
+} from "@/components/ui/dropdown-menu";
 
-const Header = () => {
+const NavBar = () => {
     const { mode, setMode } = useTheme();
 
     return (
         <div className="flex justify-between bg-gray-900 py-5 px-10">
             <div className="flex items-center gap-4 cursor-pointer">
-                <img src="https://www.plusdev.net/_next/image?url=%2Fassets%2Fimages%2Fpulsdev.png&w=48&q=100"></img>
+                <img src={logo} alt="PlusDev.NET" />
                 <p className="text-2xl text-white font cursor-pointer">
                     PlusDev
                     <span className="text-red-600">.NET</span>
@@ -52,23 +64,32 @@ const Header = () => {
 
                 <DropdownMenu>
                     <DropdownMenuTrigger>
-                        { mode === "dark" ? <Sun /> : <Moon /> }
+                        {mode === "dark" ? <Sun /> : <Moon />}
                     </DropdownMenuTrigger>
                     <DropdownMenuContent>
                         <DropdownMenuItem>
-                            <button className="flex items-center gap-2 py-2 px-4" onClick={() => setMode("light")}>
+                            <button
+                                className="flex items-center gap-2 py-2 px-4"
+                                onClick={() => setMode("light")}
+                            >
                                 <Sun />
                                 <span>Light</span>
                             </button>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
-                            <button className="flex items-center gap-2 py-2 px-4" onClick={() => setMode("dark")}>
+                            <button
+                                className="flex items-center gap-2 py-2 px-4"
+                                onClick={() => setMode("dark")}
+                            >
                                 <Moon />
                                 <span>Dark</span>
                             </button>
                         </DropdownMenuItem>
                         <DropdownMenuItem>
-                            <button className="flex items-center gap-2 py-2 px-4" onClick={() => setMode("system")}>
+                            <button
+                                className="flex items-center gap-2 py-2 px-4"
+                                onClick={() => setMode("system")}
+                            >
                                 <Cpu />
                                 <span>System</span>
                             </button>
@@ -94,10 +115,10 @@ const Header = () => {
                             </button>
                         </DropdownMenuItem>
                     </DropdownMenuContent>
-                </DropdownMenu>               
+                </DropdownMenu>
             </div>
         </div>
     );
 };
 
-export default Header;
+export default NavBar;

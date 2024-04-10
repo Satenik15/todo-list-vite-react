@@ -2,14 +2,12 @@ import { Link, Route, Routes } from "react-router-dom";
 import { Suspense } from "react";
 import MainPageAsync from "@/pages/MainPage/MainPage.async";
 import AboutPageAsync from "@/pages/AboutPage/AboutPage.async";
-import Header from "@/pages/Header/Header";
+import NavBar from "@/components/shared/NavBar/NavBar";
 
 const App = () => {
-
-
     return (
         <div>
-            <Header />
+            <NavBar />
             <div className="flex flex-col h-screen">
                 <nav>
                     <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
