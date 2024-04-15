@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import MainPageAsync from "@/pages/MainPage/MainPage.async";
 import AboutPageAsync from "@/pages/AboutPage/AboutPage.async";
 import NavBar from "@/components/shared/NavBar/NavBar";
+import LeftSidebar from "@/components/shared/LeftSidebar/LeftSIdebar";
 
 const App = () => {
     return (
@@ -26,6 +27,7 @@ const App = () => {
                             </Link>
                         </div>
                     </div>
+                    <LeftSidebar />
                 </nav>
 
                 <div className="flex-grow py-5">
