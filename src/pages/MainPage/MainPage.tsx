@@ -1,13 +1,12 @@
-
-
 const MainPage = () => {
-   
     return (
-        <div className="p-5">
-            <p className="text-2xl font-semibold">Main Page</p>
-            <p className="pt-3 text-slate-500">This is main page news</p>
-        </div>
-    )
-}
-
-export default MainPage;
+      <div>
+        <h1 className="text-3xl font-bold">Main Page</h1>
+        <p className="mt-2">
+          This is the main page. Click the "About" button to see the about page.
+        </p>
+      </div>
+    );
+  };
+  
+  export default MainPage;
