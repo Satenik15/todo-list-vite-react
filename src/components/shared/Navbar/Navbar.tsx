@@ -3,7 +3,6 @@ import {
   LucideNewspaper,
   LucidePlusSquare,
   LucideShieldQuestion,
-  LucideMenu
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -58,7 +57,6 @@ const Navbar = () => {
         <UserMenu />
 
         <LeftMenu />
-        {/* <LucideMenu className="h-6 w-6 text-red-500 cursor-pointer hover:text-red-500 dark:text-zinc-100 dark:hover:text-red-500 sm:hidden" /> */}
       </div>
     </nav>
   );
