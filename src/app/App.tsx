@@ -3,7 +3,7 @@ import MainPageAsync from "@/pages/MainPage/MainPage.async";
 import { Route, Routes } from "react-router-dom";
 import { Suspense } from "react";
 import Navbar from "@/components/shared/Navbar/Navbar";
-import LeftSidebar from "@/components/shared/LeftSidebar/LeftSIdebar";
+import LeftSidebar from "@/components/shared/LeftSidebar/LeftSidebar";
 import RightSidebar from "@/components/shared/RightSidebar/RightSidebar";
 import PostPageAsync from "@/pages/PostPage/PostPage.async";
 
@@ -13,7 +13,7 @@ const App = () => {
       <Navbar />
 
       <div className="flex">
-        <LeftSidebar />
+        <LeftSidebar isMobile={false} />
 
         <section className="flex min-h-screen flex-1 flex-colpx-6 pb-6 pt-28 xs:px-2 sm:px-10 md:px-6 md:pb-10">
           <div className="mx-autho w-full max-w-5xl">

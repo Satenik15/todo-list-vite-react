@@ -3,6 +3,7 @@ import {
   LucideNewspaper,
   LucidePlusSquare,
   LucideShieldQuestion,
+  LucideMenu
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -14,6 +15,7 @@ import logo from "@/assets/logo.webp";
 import GlobalSearch from "@/components/shared/GlobalSearch/GlobalSearch";
 import Theme from "@/components/shared/Navbar/Theme";
 import UserMenu from "./UserMenu";
+import LeftMenu from "../LeftMenu/LeftMenu";
 
 const Navbar = () => {
   return (
@@ -26,7 +28,7 @@ const Navbar = () => {
         </h3>
       </Link>
       <GlobalSearch />
-      <div>
+      <div className="flex items-center justify-between gap-3">
         <DropdownMenu>
           <DropdownMenuTrigger className="p-1">
             <LucidePlusSquare className="h-6 w-6 text-red-500" />
@@ -54,6 +56,9 @@ const Navbar = () => {
         <Theme type="dropdown" />
 
         <UserMenu />
+
+        <LeftMenu />
+        {/* <LucideMenu className="h-6 w-6 text-red-500 cursor-pointer hover:text-red-500 dark:text-zinc-100 dark:hover:text-red-500 sm:hidden" /> */}
       </div>
     </nav>
   );
